@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CesarCipher</string>
+    <string name="invalidInputMessage">Invalid input</string>
+    <string name="titleText">Cesar Cipher Generator</string>
+    <string name="messagePrompt">Enter text…</string>
+    <string name="cypherPrompt">Cypher value</string>
+    <string name="submitPrompt">Submit</string>
+    <string name="invalidInputText">Invalid input</string>
+    <string name="cipherMessageHeader">Cipher message:</string>
+</resources>
