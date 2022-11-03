@@ -15,12 +15,18 @@ public class ResultActivity extends AppCompatActivity {
 
         if (cypherValue < 0 || cypherValue > 25) return "Cipher value invalid\n(needs to be between 0 and 25)";
 
-        char[] cypher = messageText.toLowerCase().toCharArray();
+        char[] cypher = messageText.toCharArray();
 
         for(int i = 0; i < cypher.length; i++) {
             if (cypher[i] == ' ') continue;
-            int newPos = (char) ((cypher[i] - 'a') + cypherValue) % 26;
-            cypher[i] = (char) ('a' + newPos);
+
+            if (cypher[i] < 'a') {
+                int newPos = (char) ((cypher[i] - 'A') + cypherValue) % 26;
+                cypher[i] = (char) ('A' + newPos);
+            } else {
+                int newPos = (char) ((cypher[i] - 'a') + cypherValue) % 26;
+                cypher[i] = (char) ('a' + newPos);
+            }
         }
 
         return String.valueOf(cypher);
